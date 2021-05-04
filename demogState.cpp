@@ -4,6 +4,7 @@
 #include <string>
 #include <assert.h>
 #include <iomanip>
+#include <math.h>
 
 //add member functions here
 
@@ -22,7 +23,7 @@ std::ostream& operator<<(std::ostream &out, const demogState&SD) {
     out <<  " and total: " << int(SD.getBAupCount());
     out << "\n(\% high school or more): " << double(int(SD.getHSup()*100))/100<<"\%";
     out <<  " and total: " << int(SD.getHSupCount());
-    out << "\npersons below poverty: " << double(int(SD.getpopPoor()*100))/100<<"\%";
+    out << "\npersons below poverty: " << double(int(round(SD.getpopPoor()*100)))/100<<"\%";
     out <<  " and total: " << int(SD.getpopPoorCount());
     out << "\n" << SD.stateRace;
 
