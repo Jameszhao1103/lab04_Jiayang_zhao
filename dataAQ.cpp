@@ -322,7 +322,7 @@ void dataAQ::reportTopTenStatesPS(){
     cout << vec[i].first << endl;
     cout << "Total population: " << statedata[vec[i].first]->getTotalPopulationCount() << endl;
     cout << "Police shooting incidents: " << statepolicedata[vec[i].first]->getNumberOfCases() << endl;
-    cout << "Percent below poverty: " << double(round(int(statedata[vec[i].first]->getpopPoor()*100)))/100 << endl;
+    cout << "Percent below poverty: " << double(int(round(statedata[vec[i].first]->getpopPoor()*100)))/100 << endl;
     
   }
   cout << "..." << endl;
@@ -349,7 +349,7 @@ void dataAQ::reportTopTenStatesBP(){
   for (int i = 0; i < 10; i++){
     cout << vec[i].first << endl;
     cout << "Total population: " << statedata[vec[i].first]->getTotalPopulationCount() << endl;
-    cout << "Percent below poverty: " << double(round(int(statedata[vec[i].first]->getpopPoor()*100)))/100 << endl;
+    cout << "Percent below poverty: " << double(int(round(statedata[vec[i].first]->getpopPoor()*100)))/100 << endl;
     cout << "Police shooting incidents: " << statepolicedata[vec[i].first]->getNumberOfCases() << endl;
     
     
